@@ -1,4 +1,5 @@
 import MyPage from "./components/Mypage";
+import MyPageContext from "./components/MypageContext";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <h3>Documentacion</h3>
       <hr />
       <MyPage />
+      <hr />
+      <MyPageContext />
     </div>
   );
 }
