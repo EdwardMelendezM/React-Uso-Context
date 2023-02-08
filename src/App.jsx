@@ -1,4 +1,5 @@
 import MyPage from "./components/Mypage";
+import CrudApi from "./components/CrudApi";
 import MyPageContext from "./components/MypageContext";
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
         rel="noreferrer"
       ></a>
       <h3>Documentacion</h3>
+      <hr />
+      <CrudApi />
       <hr />
       <MyPage />
       <hr />
