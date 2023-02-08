@@ -5,23 +5,17 @@ import MainContext from "./MainContext";
 import FooterContext from "./FooterContext";
 import { ThemeProvider } from "../context/ThemeContext";
 import { LanguageProvider } from "../context/LanguageContext";
+import { AuthProvider } from "../context/AuthContext";
 
 const MyPageContext = () => {
-  const [auth, setAuth] = useState(null);
-
-  const handleAuth = (e) => {
-    if (auth) {
-      setAuth(null);
-    } else {
-      setAuth(true);
-    }
-  };
   return (
     <div className="myPage">
       <LanguageProvider>
         <ThemeProvider>
-          <HeaderContext auth={auth} handleAuth={handleAuth} />
-          <MainContext auth={auth} />
+          <AuthProvider>
+            <HeaderContext />
+            <MainContext />
+          </AuthProvider>
           <FooterContext />
         </ThemeProvider>
       </LanguageProvider>
