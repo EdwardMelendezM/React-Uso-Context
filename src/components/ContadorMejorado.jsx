@@ -1,10 +1,10 @@
 import React, { useReducer, useState } from "react";
+import { TYPES } from "../actions/ContadorAction";
 import {
   contadorInit,
   contadorInitialState,
   contadorReducer,
 } from "../reducers/ContadorReducer";
-
 const ContadorMejorado = () => {
   //const [contador, setContador] = useState(0);
   const [state, dispatch] = useReducer(

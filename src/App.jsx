@@ -4,11 +4,14 @@ import MyPageContext from "./components/MypageContext";
 import { CrudProvider } from "./context/CrudContext";
 import Contador from "./components/Contador";
 import ContadorMejorado from "./components/ContadorMejorado";
+import ShoppingCard from "./components/ShoppingCard";
 
 function App() {
   return (
     <div>
       <h1>React reducer</h1>
+      <hr />
+      <ShoppingCard />
       <hr />
       <Contador />
       <hr />
