@@ -3,6 +3,7 @@ import CrudApi from "./components/CrudApi";
 import MyPageContext from "./components/MypageContext";
 import { CrudProvider } from "./context/CrudContext";
 import Contador from "./components/Contador";
+import ContadorMejorado from "./components/ContadorMejorado";
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <h1>React reducer</h1>
       <hr />
       <Contador />
+      <hr />
+      <ContadorMejorado />
       <hr />
       <h1>React context api</h1>
       <a
