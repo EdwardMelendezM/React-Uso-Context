@@ -1,9 +1,14 @@
-const CrudTableRow = ({ el, setDataToEdit, deleteData }) => {
+import { useContext } from "react";
+import CrudContext from "../context/CrudContext";
+
+const CrudTableRow = ({ el }) => {
+  const { setDataToEdit, deleteData } = useContext(CrudContext);
   let { name, constellation, id } = el;
+
   return (
     <tr>
-      <th>{el.name}</th>
-      <th>{el.constellation}</th>
+      <th>{name}</th>
+      <th>{constellation}</th>
       <th>
         <button
           onClick={() => {
@@ -14,7 +19,7 @@ const CrudTableRow = ({ el, setDataToEdit, deleteData }) => {
         </button>
         <button
           onClick={() => {
-            deleteData(el.id);
+            deleteData(id);
           }}
         >
           Eliminar

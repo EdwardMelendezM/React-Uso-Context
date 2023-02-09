@@ -1,6 +1,7 @@
 import MyPage from "./components/Mypage";
 import CrudApi from "./components/CrudApi";
 import MyPageContext from "./components/MypageContext";
+import { CrudProvider } from "./context/CrudContext";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       ></a>
       <h3>Documentacion</h3>
       <hr />
-      <CrudApi />
+      <CrudProvider>
+        <CrudApi />
+      </CrudProvider>
       <hr />
       <MyPage />
       <hr />

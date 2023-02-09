@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import CrudContext from "../context/CrudContext";
 import CrudTableRow from "./CrudTableRow";
 
-const CrudTable = ({ data, setDataToEdit, deleteData }) => {
+const CrudTable = () => {
+  const { db: data } = useContext(CrudContext);
   return (
     <div>
       <h3>Tabla de datos</h3>
@@ -14,14 +17,7 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
         </thead>
         <tbody>
           {data.length > 0 ? (
-            data.map((el) => (
-              <CrudTableRow
-                key={el.id}
-                el={el}
-                setDataToEdit={setDataToEdit}
-                deleteData={deleteData}
-              />
-            ))
+            data.map((el) => <CrudTableRow key={el.id} el={el} />)
           ) : (
             <tr>
               <td colSpan="3">Sin datos</td>
